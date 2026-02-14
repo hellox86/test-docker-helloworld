@@ -1,7 +1,8 @@
 cmake_minimum_required(VERSION 3.5)
 project(hello-world)
-set(CMAKE_CXX_STANDARD 11)
-
+set(CMAKE_CXX_COMPILER g++)
+set(BUILD_SHARED_LIBS OFF)
+set(FLAGS "-static")
 file(GLOB SRC ./src/*.cpp)
-
+add_link_options("-static")
 add_executable(${PROJECT_NAME} ${SRC})
